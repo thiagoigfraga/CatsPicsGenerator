@@ -1,15 +1,20 @@
 import { useState } from 'react';
 
+export default function Button({fetchCatPics}=props) {
+const [ativo, setAtivo] = useState(true);
+const [botaoConteudo, setBotaoConteudo] = useState("Carregar");
 
-export default function Button(props) {
-const [ativo, setAtivo] = useState(false);
+function handleClick() {
+    fetchCatPics();
+    setAtivo(!ativo);
+    setBotaoConteudo("Recarregar");
+}
 
 return (
     <>
-        {ativo ? 
-            <button onClick={() => setAtivo(false)}>Ativo</button> 
-            : 
-            <button onClick={() => setAtivo(true)}>Inativo</button>
+        { 
+        <button className="btnStyle" onClick={()=> handleClick()}>{botaoConteudo}</button> 
+        
         }
     </>
 );

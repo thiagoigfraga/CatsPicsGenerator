@@ -1,3 +1,9 @@
+---
+const { pageName} = Astro.props;
+import '@fontsource/poppins';
+import '../assets/styles/global.css';
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +11,10 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{pageName}</title>
 	</head>
 	<body>
+		<h1>Welcome to {pageName}</h1>
 		<slot />
 	</body>
 </html>

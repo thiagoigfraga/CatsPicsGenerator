@@ -1,48 +1,65 @@
-# Astro Starter Kit: Basics
+# CatPicsGenerator
 
-```sh
-npm create astro@latest -- --template basics
-```
+CatPicsGenerator is a simple web application that fetches random cat pictures from an API and displays them in a grid layout. Users can click on any cat picture to open it in a modal, viewing a larger version centered on the screen. Clicking outside the modal closes the image.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Fetches random cat images from [thecatapi.com](https://thecatapi.com/)
+- Displays images in a responsive grid layout
+- Modal view for enlarged image display with click-to-close functionality
+- Simple and clean design using Astro, React, and custom CSS
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Getting Started
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+- Node.js (v14 or higher)
+- npm or yarn
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Installation
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/CatPicsGenerator.git
+   cd CatPicsGenerator
+   ```
 
-## 🧞 Commands
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+4. Open your browser and navigate to `http://localhost:3000` (or the port specified in the terminal) to view the app.
 
-## 👀 Want to learn more?
+## Project Structure
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **src/components/CatPics.jsx**: Main component that fetches and displays cat images.
+- **src/assets/styles/global.css**: Global CSS styles for the application including modal and grid styling.
+- **src/pages/index.astro**: Entry point of the application integrating the components within the Astro layout.
+
+## Usage
+
+- Click the **Fetch CatPics** button to load a new set of cat pictures.
+- Click on any image to open it in a modal.
+- Click outside the modal image to close the modal and return to the grid view.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request if you'd like to contribute.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [The Cat API](https://thecatapi.com/) for providing random cat images.
